@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dev-portal | airpocket-soundman</title>
+  <meta name="description" content="airpocket-soundman の開発プロジェクトと GitHub Pages のポータル">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>dev-portal</h1>
+    <p class="sub">
+      <a href="https://github.com/airpocket-soundman" target="_blank" rel="noopener">@airpocket-soundman</a>
+      の開発プロジェクト一覧
+    </p>
+  </header>
+
+  <section class="controls">
+    <input id="q" type="search" placeholder="検索 (名前 / 説明 / 言語 / トピック)" autocomplete="off">
+    <div class="row">
+      <label><input id="pagesOnly" type="checkbox"> Pages ありのみ</label>
+      <label><input id="hideForks" type="checkbox" checked> fork を隠す</label>
+      <label><input id="hideArchived" type="checkbox"> archived を隠す</label>
+      <select id="sort">
+        <option value="pushed">更新が新しい順</option>
+        <option value="name">名前順</option>
+        <option value="stars">スター順</option>
+        <option value="created">作成が新しい順</option>
+      </select>
+    </div>
+    <div class="index">
+      <span class="label">言語</span>
+      <div id="langIndex" class="chips"></div>
+    </div>
+    <div class="index">
+      <span class="label">頭文字</span>
+      <div id="letterIndex" class="chips"></div>
+    </div>
+  </section>
+
+  <p id="status" class="status">読み込み中…</p>
+  <ul id="list" class="list"></ul>
+
+  <footer>
+    データ: GitHub API (1時間ブラウザにキャッシュ) ・
+    <a href="#" id="reload">再取得</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
