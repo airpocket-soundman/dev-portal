@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T04:49:38.346Z",
+ "generatedAt": "2026-09-28T04:51:19.047Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -360,21 +360,6 @@
    "archived": false,
    "pushed": "2025-02-28T01:32:13Z",
    "created": "2025-02-28T01:32:13Z"
-  },
-  {
-   "name": "dev-portal",
-   "description": "公開プロジェクトとGitHub Pagesを探せる開発ポータル",
-   "url": "https://github.com/airpocket-soundman/dev-portal",
-   "homepage": "",
-   "pages": "https://airpocket-soundman.github.io/dev-portal/",
-   "protopedia": [],
-   "language": "JavaScript",
-   "topics": [],
-   "stars": 0,
-   "fork": false,
-   "archived": false,
-   "pushed": "2026-09-28T04:49:27Z",
-   "created": "2026-09-25T01:58:37Z"
   },
   {
    "name": "easy_image_editor",

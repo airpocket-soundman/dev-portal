@@ -32,7 +32,8 @@ async function fetchRepos() {
     all.push(...batch);
     if (batch.length < 100) break;
   }
-  return all.filter((r) => !r.private);
+  // dev-portal 自身はデータコミットのたびに pushed_at が変わり差分が出続けるので除外
+  return all.filter((r) => !r.private && r.name !== "dev-portal");
 }
 
 function pagesUrl(name) {
