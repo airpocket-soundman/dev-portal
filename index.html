@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>dev-portal | airpocket-soundman</title>
   <meta name="description" content="airpocket-soundman の開発プロジェクトと GitHub Pages のポータル">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +21,7 @@
     <input id="q" type="search" placeholder="検索 (名前 / 説明 / 言語 / トピック)" autocomplete="off">
     <div class="row">
       <label><input id="pagesOnly" type="checkbox"> Pages ありのみ</label>
+      <label><input id="ppOnly" type="checkbox"> ProtoPedia ありのみ</label>
       <label><input id="hideForks" type="checkbox" checked> fork を隠す</label>
       <label><input id="hideArchived" type="checkbox"> archived を隠す</label>
       <select id="sort">
@@ -43,7 +45,7 @@
   <ul id="list" class="list"></ul>
 
   <footer>
-    データ: GitHub API (1時間ブラウザにキャッシュ) ・
+    データ: <span id="source">-</span> ・ 毎日自動更新 ・
     <a href="#" id="reload">再取得</a>
   </footer>
 

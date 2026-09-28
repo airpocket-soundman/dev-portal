@@ -25,6 +25,7 @@ async function fetchRepos() {
     url: r.html_url,
     homepage: r.homepage || "",
     pages: r.has_pages ? pagesUrl(r.name) : "",
+    protopedia: [],
     language: r.language || "",
     topics: r.topics || [],
     stars: r.stargazers_count,
@@ -55,19 +56,35 @@ function writeCache(repos) {
   } catch {}
 }
 
+// Actions が定期生成する data/repos.json を優先。無ければ GitHub API を直接叩く
+async function loadGenerated() {
+  const res = await fetch(`data/repos.json?t=${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`data/repos.json ${res.status}`);
+  const d = await res.json();
+  return { repos: d.repos, at: d.generatedAt };
+}
+
 async function load(force = false) {
   $("status").textContent = "読み込み中…";
-  let repos = force ? null : readCache();
-  if (!repos) {
-    try {
-      repos = await fetchRepos();
-      writeCache(repos);
-    } catch (e) {
-      $("status").textContent = `取得に失敗しました: ${e.message}（API のレート制限の可能性があります。しばらく待って再取得してください）`;
-      return;
+  try {
+    const d = await loadGenerated();
+    state.repos = d.repos;
+    state.source = `data/repos.json (${new Date(d.at).toLocaleString("ja-JP")} 生成)`;
+  } catch {
+    let repos = force ? null : readCache();
+    if (!repos) {
+      try {
+        repos = await fetchRepos();
+        writeCache(repos);
+      } catch (e) {
+        $("status").textContent = `取得に失敗しました: ${e.message}（API のレート制限の可能性があります。しばらく待って再取得してください）`;
+        return;
+      }
     }
+    state.repos = repos;
+    state.source = "GitHub API（ProtoPedia 情報なし）";
   }
-  state.repos = repos;
+  $("source").textContent = state.source;
   render();
 }
 
@@ -82,11 +99,12 @@ function baseFiltered() {
   const q = $("q").value.trim().toLowerCase().split(/\s+/).filter(Boolean);
   return state.repos.filter((r) => {
     if ($("pagesOnly").checked && !r.pages) return false;
+    if ($("ppOnly").checked && !r.protopedia.length) return false;
     if ($("hideForks").checked && r.fork) return false;
     if ($("hideArchived").checked && r.archived) return false;
     if (state.topic && !r.topics.includes(state.topic)) return false;
     if (q.length) {
-      const hay = [r.name, r.description, r.language, ...r.topics].join(" ").toLowerCase();
+      const hay = [r.name, r.description, r.language, ...r.topics, ...r.protopedia.map((p) => p.title)].join(" ").toLowerCase();
       if (!q.every((w) => hay.includes(w))) return false;
     }
     return true;
@@ -129,11 +147,12 @@ function render() {
   );
 
   const pagesCount = list.filter((r) => r.pages).length;
+  const ppCount = list.filter((r) => r.protopedia.length).length;
   const filters = [state.lang, state.letter && `頭文字:${state.letter}`, state.topic && `#${state.topic}`]
     .filter(Boolean)
     .join(" / ");
   $("status").textContent =
-    `${list.length} / ${state.repos.length} リポジトリ（うち Pages あり ${pagesCount}）` +
+    `${list.length} / ${state.repos.length} リポジトリ（Pages ${pagesCount} / ProtoPedia ${ppCount}）` +
     (filters ? ` ・ 絞り込み: ${filters}` : "");
 
   $("list").replaceChildren(...list.map(card));
@@ -205,6 +224,11 @@ function card(r) {
 
   const links = el("div", "links");
   if (r.pages) links.append(link(r.pages, "▶ Pages", "pages"));
+  for (const p of r.protopedia) {
+    const a = link(p.url, r.protopedia.length > 1 ? `ProtoPedia: ${p.title}` : "ProtoPedia", "protopedia");
+    a.title = p.title;
+    links.append(a);
+  }
   links.append(link(r.url, "GitHub"));
   if (r.homepage && r.homepage.replace(/\/$/, "") !== r.pages.replace(/\/$/, "")) {
     links.append(link(r.homepage, "Homepage"));
@@ -230,7 +254,7 @@ function link(href, text, cls = "") {
 
 // ---------- events ----------
 
-for (const id of ["q", "pagesOnly", "hideForks", "hideArchived", "sort"]) {
+for (const id of ["q", "pagesOnly", "ppOnly", "hideForks", "hideArchived", "sort"]) {
   $(id).addEventListener(id === "q" ? "input" : "change", render);
 }
 $("reload").addEventListener("click", (e) => {

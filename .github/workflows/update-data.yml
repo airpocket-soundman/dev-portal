@@ -1,0 +1,43 @@
+name: Update portal data
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 毎日 06:00 JST
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build-data.mjs
+      - data/protopedia-links.json
+      - .github/workflows/update-data.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/build-data.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit if changed
+        run: |
+          # generatedAt だけの差分ではコミットしない
+          if git diff --quiet -I '"generatedAt"' -- data/repos.json && git ls-files --error-unmatch data/repos.json >/dev/null 2>&1; then
+            echo "no changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/repos.json
+          git commit -m "Update portal data"
+          git push
