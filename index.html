@@ -41,12 +41,18 @@
     </div>
   </section>
 
-  <p id="status" class="status">読み込み中…</p>
+  <div class="statusbar">
+    <p id="status" class="status">読み込み中…</p>
+    <div class="actions">
+      <button type="button" id="refresh">GitHubから最新を取得</button>
+      <a href="https://github.com/airpocket-soundman/dev-portal/actions/workflows/update-data.yml" target="_blank" rel="noopener"
+         title="Actions の画面で Run workflow を押すと ProtoPedia も含めてデータを作り直します（管理者のみ）">データを更新</a>
+    </div>
+  </div>
   <ul id="list" class="list"></ul>
 
   <footer>
-    データ: <span id="source">-</span> ・ 毎日自動更新 ・
-    <a href="#" id="reload">再取得</a>
+    データ: <span id="source">-</span> ・ 毎日 06:00 に自動更新
   </footer>
 
   <script src="app.js"></script>

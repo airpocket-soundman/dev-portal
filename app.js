@@ -19,7 +19,8 @@ async function fetchRepos() {
     all.push(...batch);
     if (batch.length < 100) break;
   }
-  return all.map((r) => ({
+  // dev-portal 自身は一覧に出さない（build-data.mjs と同じ）
+  return all.filter((r) => r.name !== "dev-portal").map((r) => ({
     name: r.name,
     description: r.description || "",
     url: r.html_url,
@@ -86,6 +87,31 @@ async function load(force = false) {
   }
   $("source").textContent = state.source;
   render();
+}
+
+// ブラウザから GitHub API を直接叩いて最新化。ProtoPedia の対応は生成済みデータから引き継ぐ
+async function refreshLive() {
+  const btn = $("refresh");
+  btn.disabled = true;
+  btn.textContent = "取得中…";
+  try {
+    const known = new Map(state.repos.map((r) => [r.name, r.protopedia || []]));
+    const before = new Set(state.repos.map((r) => r.name));
+    const repos = await fetchRepos();
+    for (const r of repos) r.protopedia = known.get(r.name) || [];
+    writeCache(repos);
+    const added = repos.filter((r) => !before.has(r.name)).length;
+    state.repos = repos;
+    state.source = `GitHub API (${new Date().toLocaleString("ja-JP")} 取得)`;
+    $("source").textContent = state.source;
+    render();
+    $("status").textContent += added ? ` ・ 新しいリポジトリ ${added} 件` : " ・ 最新です";
+  } catch (e) {
+    $("status").textContent = `取得に失敗しました: ${e.message}（GitHub API の利用回数の上限の可能性があります。1時間ほど待ってから試してください）`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "GitHubから最新を取得";
+  }
 }
 
 // ---------- filtering ----------
@@ -257,9 +283,6 @@ function link(href, text, cls = "") {
 for (const id of ["q", "pagesOnly", "ppOnly", "hideForks", "hideArchived", "sort"]) {
   $(id).addEventListener(id === "q" ? "input" : "change", render);
 }
-$("reload").addEventListener("click", (e) => {
-  e.preventDefault();
-  load(true);
-});
+$("refresh").addEventListener("click", refreshLive);
 
 load();

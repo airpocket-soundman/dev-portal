@@ -81,7 +81,16 @@ header .sub { margin: 4px 0 16px; color: var(--muted); }
 .chip:disabled { opacity: .35; cursor: default; }
 .chip small { opacity: .7; margin-left: 2px; }
 
-.status { color: var(--muted); font-size: .9rem; }
+.statusbar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; margin: 12px 0; }
+.status { color: var(--muted); font-size: .9rem; margin: 0; }
+.actions { display: flex; gap: 12px; align-items: center; font-size: .85rem; }
+.actions button {
+  font: inherit; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--card); color: var(--text); padding: 3px 12px;
+}
+.actions button:hover:not(:disabled) { border-color: var(--accent); }
+.actions button:disabled { opacity: .6; cursor: default; }
 
 .list {
   list-style: none; padding: 0; margin: 0;
