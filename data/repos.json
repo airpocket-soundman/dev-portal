@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-13T06:01:20.783Z",
+ "generatedAt": "2026-10-13T21:04:27.966Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -108,6 +108,21 @@
    "archived": false,
    "pushed": "2026-09-24T08:35:19Z",
    "created": "2026-09-24T06:43:13Z"
+  },
+  {
+   "name": "airpocket-simulation-studio",
+   "description": "Browser-based multiphysics simulation studio / 構造・熱・流体・音響解析アプリ（開発中）",
+   "url": "https://github.com/airpocket-soundman/airpocket-simulation-studio",
+   "homepage": "https://airpocket-soundman.github.io/airpocket-simulation-studio/",
+   "pages": "https://airpocket-soundman.github.io/airpocket-simulation-studio/",
+   "protopedia": [],
+   "language": "JavaScript",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-13T21:00:45Z",
+   "created": "2026-10-13T05:35:25Z"
   },
   {
    "name": "Atomic-VUMeter-Base",
@@ -448,6 +463,21 @@
    "created": "2026-04-16T09:25:54Z"
   },
   {
+   "name": "everyday-inquiry",
+   "description": "中高生の何気ない会話から探究テーマを見つける教材と研究事例",
+   "url": "https://github.com/airpocket-soundman/everyday-inquiry",
+   "homepage": "https://airpocket-soundman.github.io/everyday-inquiry/",
+   "pages": "https://airpocket-soundman.github.io/everyday-inquiry/",
+   "protopedia": [],
+   "language": "HTML",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-12T23:35:37Z",
+   "created": "2026-10-12T22:49:32Z"
+  },
+  {
    "name": "face-entry-log",
    "description": "監視カメラからの顔認証で入退室ログを記録する",
    "url": "https://github.com/airpocket-soundman/face-entry-log",
@@ -665,11 +695,6 @@
      "id": 8556,
      "title": "IchiPing on Solist-AI -家中の窓と扉を「聴いて」その場で学び直すエッジAI-",
      "url": "https://protopedia.net/prototype/8556"
-    },
-    {
-     "id": 8470,
-     "title": "IchiPing  -1 個のセンサで家中の窓と扉を「聴く」エッジ AI-",
-     "url": "https://protopedia.net/prototype/8470"
     }
    ],
    "language": "C",
@@ -1586,7 +1611,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-10-07T10:20:25Z",
+   "pushed": "2026-10-13T04:57:08Z",
    "created": "2026-09-30T03:29:35Z"
   },
   {
@@ -1956,21 +1981,6 @@
    "archived": false,
    "pushed": "2023-12-20T03:26:57Z",
    "created": "2023-12-20T03:26:56Z"
-  },
-  {
-   "name": "airpocket-simulation-studio",
-   "description": "3Dモデルの構造・熱・流体・音響解析 / Browser-based multiphysics simulation studio",
-   "url": "https://github.com/airpocket-soundman/airpocket-simulation-studio",
-   "homepage": "https://airpocket-soundman.github.io/airpocket-simulation-studio/",
-   "pages": "https://airpocket-soundman.github.io/airpocket-simulation-studio/",
-   "protopedia": [],
-   "language": "JavaScript",
-   "topics": [],
-   "stars": 0,
-   "fork": false,
-   "archived": false,
-   "pushed": "2026-10-13T06:00:04Z",
-   "created": "2026-10-13T05:35:25Z"
   }
  ],
  "unlinkedPrototypes": [
