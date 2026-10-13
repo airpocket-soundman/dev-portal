@@ -250,6 +250,9 @@ function card(r) {
 
   const links = el("div", "links");
   if (r.pages) links.append(link(r.pages, "▶ Pages", "pages"));
+  if (r.name === "airpocket-simulation-studio") {
+    links.append(link("https://airpocket-soundman.github.io/airpocket-simulation-studio/development.html", "開発管理 / Development"));
+  }
   for (const p of r.protopedia) {
     const a = link(p.url, r.protopedia.length > 1 ? `ProtoPedia: ${p.title}` : "ProtoPedia", "protopedia");
     a.title = p.title;

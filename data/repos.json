@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T21:04:21.799Z",
+ "generatedAt": "2026-10-13T06:01:20.783Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -1956,6 +1956,21 @@
    "archived": false,
    "pushed": "2023-12-20T03:26:57Z",
    "created": "2023-12-20T03:26:56Z"
+  },
+  {
+   "name": "airpocket-simulation-studio",
+   "description": "3Dモデルの構造・熱・流体・音響解析 / Browser-based multiphysics simulation studio",
+   "url": "https://github.com/airpocket-soundman/airpocket-simulation-studio",
+   "homepage": "https://airpocket-soundman.github.io/airpocket-simulation-studio/",
+   "pages": "https://airpocket-soundman.github.io/airpocket-simulation-studio/",
+   "protopedia": [],
+   "language": "JavaScript",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-13T06:00:04Z",
+   "created": "2026-10-13T05:35:25Z"
   }
  ],
  "unlinkedPrototypes": [

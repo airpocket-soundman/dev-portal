@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const url=new URL('../data/repos.json',import.meta.url);
+const data=JSON.parse(await readFile(url,'utf8'));
+const response=await fetch('https://api.github.com/repos/airpocket-soundman/airpocket-simulation-studio');
+if(!response.ok)throw Error('Repository metadata: '+response.status);
+const r=await response.json();
+const entry={name:r.name,description:'3Dモデルの構造・熱・流体・音響解析 / Browser-based multiphysics simulation studio',url:r.html_url,homepage:'https://airpocket-soundman.github.io/airpocket-simulation-studio/',pages:'https://airpocket-soundman.github.io/airpocket-simulation-studio/',protopedia:[],language:r.language||'JavaScript',topics:r.topics||[],stars:r.stargazers_count,fork:r.fork,archived:r.archived,pushed:r.pushed_at,created:r.created_at};
+const i=data.repos.findIndex(x=>x.name===r.name);if(i===-1)data.repos.push(entry);else data.repos[i]=entry;
+data.generatedAt=new Date().toISOString();await writeFile(url,JSON.stringify(data,null,1)+'\n');
+console.log('Simulation Studio added to portal');
