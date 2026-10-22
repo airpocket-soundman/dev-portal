@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T21:04:41.406Z",
+ "generatedAt": "2026-10-22T21:04:38.838Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -55,7 +55,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-10-21T11:13:48Z",
+   "pushed": "2026-10-22T03:34:24Z",
    "created": "2026-07-13T09:43:57Z"
   },
   {
@@ -121,7 +121,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-10-21T05:27:33Z",
+   "pushed": "2026-10-22T12:29:05Z",
    "created": "2026-10-13T05:35:25Z"
   },
   {
@@ -1684,6 +1684,51 @@
    "archived": false,
    "pushed": "2025-07-25T01:48:31Z",
    "created": "2025-07-25T01:16:38Z"
+  },
+  {
+   "name": "tab5-fpga-gpu-pages",
+   "description": "Tab5 FPGA LAB: public project documentation, specifications and progress",
+   "url": "https://github.com/airpocket-soundman/tab5-fpga-gpu-pages",
+   "homepage": "https://airpocket-soundman.github.io/tab5-fpga-gpu-pages/",
+   "pages": "https://airpocket-soundman.github.io/tab5-fpga-gpu-pages/",
+   "protopedia": [],
+   "language": "HTML",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-22T08:46:46Z",
+   "created": "2026-10-22T08:05:26Z"
+  },
+  {
+   "name": "tab5-linux-fpga",
+   "description": "Native RISC-V NOMMU Linux 6.18 with SDIO Wi-Fi (ESP-Hosted-NG) and Dropbear SSH for M5Stack Stamp-P4 + Stamp-AddOn C6",
+   "url": "https://github.com/airpocket-soundman/tab5-linux-fpga",
+   "homepage": "",
+   "pages": "https://airpocket-soundman.github.io/tab5-linux-fpga/",
+   "protopedia": [],
+   "language": "Shell",
+   "topics": [],
+   "stars": 0,
+   "fork": true,
+   "archived": false,
+   "pushed": "2026-10-22T13:39:33Z",
+   "created": "2026-10-22T05:29:37Z"
+  },
+  {
+   "name": "tab5-tang-primer20k-carrier",
+   "description": "M5Stack Tab5とTang Primer 20K Coreを接続する共通キャリア基板の設計",
+   "url": "https://github.com/airpocket-soundman/tab5-tang-primer20k-carrier",
+   "homepage": "",
+   "pages": "https://airpocket-soundman.github.io/tab5-tang-primer20k-carrier/",
+   "protopedia": [],
+   "language": "Python",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-22T15:34:54Z",
+   "created": "2026-10-22T05:10:14Z"
   },
   {
    "name": "Tab5_I2S_RX",
