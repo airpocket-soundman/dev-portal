@@ -126,7 +126,8 @@ function baseFiltered() {
   return state.repos.filter((r) => {
     if ($("pagesOnly").checked && !r.pages) return false;
     if ($("ppOnly").checked && !r.protopedia.length) return false;
-    if ($("hideForks").checked && r.fork) return false;
+    // Pages を公開している fork は自分の公開ページなので隠さない
+    if ($("hideForks").checked && r.fork && !r.pages) return false;
     if ($("hideArchived").checked && r.archived) return false;
     if (state.topic && !r.topics.includes(state.topic)) return false;
     if (q.length) {
