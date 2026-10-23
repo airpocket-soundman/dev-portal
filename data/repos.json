@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T21:04:38.838Z",
+ "generatedAt": "2026-10-23T01:43:30.292Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -1712,8 +1712,23 @@
    "stars": 0,
    "fork": true,
    "archived": false,
-   "pushed": "2026-10-22T13:39:33Z",
+   "pushed": "2026-10-22T23:45:29Z",
    "created": "2026-10-22T05:29:37Z"
+  },
+  {
+   "name": "tab5-meos-fpga",
+   "description": "MeOS fork for M5Stack Tab5 and Tang Primer 20K: external DDR3 memory, FPGA communication and GPU architecture research",
+   "url": "https://github.com/airpocket-soundman/tab5-meos-fpga",
+   "homepage": "",
+   "pages": "https://airpocket-soundman.github.io/tab5-meos-fpga/",
+   "protopedia": [],
+   "language": "C",
+   "topics": [],
+   "stars": 0,
+   "fork": true,
+   "archived": false,
+   "pushed": "2026-10-23T01:37:28Z",
+   "created": "2026-10-22T23:39:09Z"
   },
   {
    "name": "tab5-tang-primer20k-carrier",
