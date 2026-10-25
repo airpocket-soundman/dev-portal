@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T21:04:23.583Z",
+ "generatedAt": "2026-10-25T21:04:00.838Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -55,7 +55,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-10-23T23:07:10Z",
+   "pushed": "2026-10-25T13:17:30Z",
    "created": "2026-07-13T09:43:57Z"
   },
   {
@@ -844,6 +844,21 @@
    "archived": false,
    "pushed": "2025-01-25T15:12:46Z",
    "created": "2025-01-25T15:12:46Z"
+  },
+  {
+   "name": "lvgl-mcp",
+   "description": "MCP server that lets an AI agent write, render and simulate LVGL v9 device UIs headlessly",
+   "url": "https://github.com/airpocket-soundman/lvgl-mcp",
+   "homepage": "",
+   "pages": "",
+   "protopedia": [],
+   "language": "C",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-25T09:48:58Z",
+   "created": "2026-10-25T09:29:25Z"
   },
   {
    "name": "lvgl_MCP",
@@ -1742,7 +1757,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-10-24T13:25:30Z",
+   "pushed": "2026-10-25T06:11:37Z",
    "created": "2026-10-22T05:10:14Z"
   },
   {
