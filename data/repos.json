@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-29T21:03:32.272Z",
+ "generatedAt": "2026-10-30T21:03:25.735Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -1059,6 +1059,21 @@
    "created": "2026-07-27T22:21:46Z"
   },
   {
+   "name": "magfield-nodes",
+   "description": "",
+   "url": "https://github.com/airpocket-soundman/magfield-nodes",
+   "homepage": "",
+   "pages": "",
+   "protopedia": [],
+   "language": "",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-10-30T10:46:00Z",
+   "created": "2026-10-29T21:35:41Z"
+  },
+  {
    "name": "maker_contest_2026",
    "description": "maker_contest_2026",
    "url": "https://github.com/airpocket-soundman/maker_contest_2026",
@@ -2031,6 +2046,21 @@
    "archived": false,
    "pushed": "2026-07-27T23:52:06Z",
    "created": "2026-07-22T11:23:11Z"
+  },
+  {
+   "name": "xangi",
+   "description": "xangi - AGENTIC NEON GENESIS INTELLIGENCE",
+   "url": "https://github.com/airpocket-soundman/xangi",
+   "homepage": "",
+   "pages": "",
+   "protopedia": [],
+   "language": "",
+   "topics": [],
+   "stars": 0,
+   "fork": true,
+   "archived": false,
+   "pushed": "2026-10-30T08:03:43Z",
+   "created": "2026-10-30T04:39:11Z"
   },
   {
    "name": "xiamocon",
