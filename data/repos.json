@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T21:03:50.305Z",
+ "generatedAt": "2026-11-03T21:03:34.563Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -1772,7 +1772,7 @@
    "stars": 0,
    "fork": true,
    "archived": false,
-   "pushed": "2026-10-28T03:40:13Z",
+   "pushed": "2026-11-03T08:24:35Z",
    "created": "2026-10-22T23:39:09Z"
   },
   {
@@ -1787,7 +1787,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-11-02T14:05:15Z",
+   "pushed": "2026-11-03T20:42:58Z",
    "created": "2026-10-22T05:10:14Z"
   },
   {
@@ -2059,8 +2059,23 @@
    "stars": 0,
    "fork": true,
    "archived": false,
-   "pushed": "2026-11-02T14:14:32Z",
+   "pushed": "2026-11-03T16:47:43Z",
    "created": "2026-10-30T04:39:11Z"
+  },
+  {
+   "name": "xangi-voice-input",
+   "description": "Browser speech input extension for the Xangi chat composer",
+   "url": "https://github.com/airpocket-soundman/xangi-voice-input",
+   "homepage": "",
+   "pages": "",
+   "protopedia": [],
+   "language": "JavaScript",
+   "topics": [],
+   "stars": 0,
+   "fork": false,
+   "archived": false,
+   "pushed": "2026-11-03T04:53:12Z",
+   "created": "2026-11-03T00:21:59Z"
   },
   {
    "name": "xiamocon",
