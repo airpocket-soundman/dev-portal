@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-15T21:03:16.161Z",
+ "generatedAt": "2026-11-16T21:03:24.920Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -55,7 +55,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-11-05T13:49:33Z",
+   "pushed": "2026-11-16T11:52:23Z",
    "created": "2026-07-13T09:43:57Z"
   },
   {
@@ -695,6 +695,11 @@
      "id": 8556,
      "title": "IchiPing on Solist-AI -家中の窓と扉を「聴いて」その場で学び直すエッジAI-",
      "url": "https://protopedia.net/prototype/8556"
+    },
+    {
+     "id": 8470,
+     "title": "IchiPing  -1 個のセンサで家中の窓と扉を「聴く」エッジ AI-",
+     "url": "https://protopedia.net/prototype/8470"
     }
    ],
    "language": "C",
@@ -702,7 +707,7 @@
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-11-07T10:16:19Z",
+   "pushed": "2026-11-16T11:58:40Z",
    "created": "2026-06-05T11:05:52Z"
   },
   {
