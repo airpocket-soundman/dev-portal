@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-16T21:03:24.920Z",
+ "generatedAt": "2026-11-19T21:03:20.055Z",
  "repos": [
   {
    "name": "100yearCamera",
@@ -307,13 +307,19 @@
    "url": "https://github.com/airpocket-soundman/chikuwa-flute-robot",
    "homepage": "",
    "pages": "https://airpocket-soundman.github.io/chikuwa-flute-robot/",
-   "protopedia": [],
+   "protopedia": [
+    {
+     "id": 10569,
+     "title": "やまびこ1号",
+     "url": "https://protopedia.net/prototype/10569"
+    }
+   ],
    "language": "Python",
    "topics": [],
    "stars": 0,
    "fork": false,
    "archived": false,
-   "pushed": "2026-09-24T03:35:55Z",
+   "pushed": "2026-11-19T05:03:50Z",
    "created": "2026-09-15T09:52:26Z"
   },
   {
